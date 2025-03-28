@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sam's Shack</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="cotainer">
+        <nav>
+          <img src="Images/terry foundation.png" alt="logo" />
+          <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <h1>Sammy Vrla</h1>
+          <p>Coding Projects</p>
+        </div>
+      </div>
+    </div>
+    <!--------about------->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="Images/cropsam.png" />
+          </div>
+
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              I am currently a computer science student at the University of Texas at Dallas
+              and I have a background in AI, Software/Web Development, and Cybersecurity.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+              <p class="tab-links" onclick="opentab('Education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="Skills">
+              <div class="fade">
+                <ul>
+                  <li>Python</li>
+                  <li>C/C++</li>
+                  <li>Java</li>
+                  <li>HTML/CSS</li>
+                  <li>React</li>
+                  <li>Machine Learning</li>
+                  <li>Customer Service</li>
+                  <li>Leadership</li>
+                </ul>
+              </div>
+            </div>
+            <div class="tab-contents" id="Experience">
+              <div class="fade">
+                <ul>
+                  <li></li>
+                </ul>
+              </div>
+            </div>
+            <div class="tab-contents" id="Education">
+              <div class="fade">
+                <ul>
+                  <li></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--------services---->
+    <div id="services"> 
+        <h1 class="sub-title">My Services </h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Artifical Intelligence</h2>
+                <p>AI development</p>
+                <a href="#">Learn more</a>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>Software Development</h2>
+                <p>Software projects</p>
+                <a href="#">Learn more</a>
+            </div> 
+
+            <div>
+                <i class="fa-brands fa-uncharted"></i>
+                <h2>Cybersecurity</h2>
+                <p>Security is important</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+    <!--------portfolio---->
+    <div id="portfolio">
+        <div class="container">
+          <h1 class="sub-title">Work Portfolio</h1>
+          <div class="work-list">
+              <div class="work">
+                  <img src="Images/terry foundation.png" alt="Project 1">
+                  <div class="layer">
+                      <h3>Project 1 Title</h3>
+                      <a href="https://github.com/sammyvrla" target="_blank"><i class="fa-solid fa-link"></i>Link</a>
+                  </div>
+              </div>
+
+              <div class="work">
+                  <img src="Images/terry foundation.png" alt="Project 2">
+                  <div class="layer">
+                      <h3>Project 2 Title</h3>
+                      <a href="https://github.com/sammyvrla" target="_blank"><i class="fa-solid fa-link"></i>Link</a>
+                  </div>
+              </div>
+
+              <div>
+                <div class="work">
+                  <img src="Images/terry foundation.png" alt="Project 3">
+                  <div class="layer">
+                      <h3>Project 3 Title</h3>
+                      <a href="https://github.com/sammyvrla" target="_blank"><i class="fa-solid fa-link"></i>Link</a>
+                  </div>
+              </div>
+          </div>
+        </div>
+        
+        <!--scripts-->
+        <script>
+          var tablinks = document.getElementsByClassName("tab-links")
+          var tabcontents = document.getElementsByClassName("tab-contents")
+    
+          function opentab(tabname){
+              for(tablink of tablinks){
+                  tablink.classList.remove("active-link");
+              }
+              for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+              }
+              event.currentTarget.classList.add("active-link");
+              document.getElementById(tabname).classList.add("active-tab");
+          }
+        </script>
+  </body>
+</html>
